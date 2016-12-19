@@ -11,11 +11,27 @@ $(document).ready(function(){
             $(this).find(".caption").removeClass('animated wobble');            
         });    
 
-    // seed data
-    const nameArr = [
-        "Dennis", "Zoe", "Jasen",
-        "Tom", "John", "Ricky",
-        "Ken", "Bob", "Nancy"
-    ]
+    // register an keypress handler
+    $("#searchBar").keyup(function() {
+        
+        // retrieve the search value
+        let searchTerm = $("#searchTerm").val();
+
+        // loop through all the items
+        $(".itemWrapper").each(function(){
+ 
+            // fade the item out if it does not contain the search term
+            if ($(this).find(".caption").text().search(new RegExp(searchTerm, "i")) < 0) {
+
+                $(this).animate({opacity: 0,}, 300);
+ 
+            // show the item if the search term matches
+            } else {
+                $(this).animate({opacity: 1,}, 300);
+            }
+            
+        });        
+
+    });
 
 });
