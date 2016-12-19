@@ -1,0 +1,67 @@
+#title {
+  margin-top: 30px;
+  color: #006bb3; }
+  #title h1 {
+    font-size: 26px; }
+
+#searchBar {
+  margin: 25px 0; }
+  #searchBar input {
+    width: 70%;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: 1px solid darkgrey; }
+  #searchBar input[type="text"] {
+    color: grey;
+    font-size: 20px;
+    padding-left: 10px; }
+  #searchBar ::-webkit-input-placeholder {
+    color: grey;
+    font-size: 20px; }
+  #searchBar button {
+    width: 20%;
+    height: 50px;
+    position: relative;
+    top: -3px; }
+
+.displayArea {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center; }
+  .displayArea .itemWrapper {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 25px; }
+    .displayArea .itemWrapper .item {
+      display: inline-block;
+      text-align: center;
+      cursor: pointer; }
+      .displayArea .itemWrapper .item img {
+        width: 100%;
+        border: 1px solid #006bb3;
+        border-radius: 6px; }
+      .displayArea .itemWrapper .item .caption {
+        color: #006bb3;
+        font-size: 25px;
+        margin-top: 5px;
+        cursor: pointer; }
+
+@media only screen and (min-width: 1024px) {
+  /* tablets and desktop */
+  #title h1 {
+    font-size: 40px; }
+  #searchBar {
+    margin: 60px 0; }
+  .displayArea {
+    width: 1024px;
+    text-align: center;
+    margin-bottom: 40px; }
+    .displayArea .itemWrapper {
+      width: 28%;
+      margin-bottom: 0px; }
+    .displayArea .itemWrapper:first-child {
+      margin-right: 30px; }
+    .displayArea .itemWrapper:last-child {
+      margin-left: 30px; } }
